@@ -13,7 +13,6 @@ function Message({ lang, setLang }) {
     const [data, setData] = useState()
     const [found, setFound] = useState()
     const [show, setShow] = useState()
-    const [id, setId] = useState();
     const [token, setToken] = useToken()
 
 
