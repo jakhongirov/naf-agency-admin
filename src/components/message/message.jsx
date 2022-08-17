@@ -17,7 +17,7 @@ function Message({ lang, setLang }) {
 
 
     useEffect(() => {
-        fetch(process.env.REACT_APP_API_URL + "/portfolio/", {
+        fetch(process.env.REACT_APP_API_URL + "/allMessage/", {
             method: "GET",
             headers: {
                 token: token
@@ -27,8 +27,6 @@ function Message({ lang, setLang }) {
             .then(data => setData(data))
             .catch((e) => console.log(e))
     }, [lang])
-
-    console.log(data);
 
     const HandleDelete = (e) => {
         const id = JSON.parse(e.target.dataset.id);
